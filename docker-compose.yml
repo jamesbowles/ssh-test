@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  app: &app
+    build:
+      context: .
+      args:
+        - USER=${USER:-root}
+
+  backend:
+    <<: *app
+
+
